@@ -26,7 +26,10 @@ Run the following command to build the Docker image. The -t flag lets you tag yo
     $ docker exec -it <container id> /bin/bash
 
 In the example above, Docker mapped the `8080` port inside of the container to the port `49160` on your machine.
+    
+`
     $ curl -i localhost:49160
+`
     
     HTTP/1.1 200 OK
     X-Powered-By: Express
