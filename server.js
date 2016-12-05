@@ -8,8 +8,9 @@ const PORT = 8080;
 // App
 const app = express();
 app.get('/', function (req, res) {
-  res.send('Hello world from docker! \n');
+  console.log('GET was executed on http://localhost:' + PORT);
+  res.send('Hello from docker! \n');
 });
 
 app.listen(PORT);
-console.log('Running inside container on http://localhost:' + PORT);
+console.log('Running inside a docker container on http://localhost:' + PORT);
