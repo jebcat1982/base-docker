@@ -16,14 +16,21 @@ Run the following command to build the Docker image. The -t flag lets you tag yo
     # Get container ID
     $ docker ps
 
-    # Print app output
-    $ docker logs <container id>
-
     # Example
     Running on http://localhost:8080
 
     # Enter the container
     $ docker exec -it <container id> /bin/bash
+
+## Logging
+    # Print app output
+    $ docker logs <container id>
+
+    # Tail follow  docker logs --help (--details,   -f, --follow, --since string, --tail string,   -t, --timestamps)
+    $ docker logs <container id> -f
+
+    # Logging Drivers
+    https://docs.docker.com/engine/admin/logging/overview/
 
 ## Stop and Deleting containers
     # removing all containers that are not running:
